@@ -1,0 +1,54 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---- 虚拟环境 ----
+.venv/
+venv/
+env/
+
+# ---- 本地密钥 / 环境变量 ----
+# 带 API Key 等凭据的配置，绝不入库
+.env
+.env.*
+!.env.example
+regular.env
+global.env
+
+# ---- IDE / 系统 ----
+.idea/
+.vscode/
+*.iml
+*.swp
+.DS_Store
+Thumbs.db
+
+# ---- nonebot 运行时 ----
+nonebot/                    # 生成的 nonebot 脚手架目录
+*.log
+logs/
+
+# ---- bot 运行时数据 / 用户隐私（会随运行变化） ----
+data/regular/wife/married.json
+data/regular/wife/divorce_count.json
+data/regular/wife/last_day.txt
+# 含用户私人 token，绝不入库
+data/wmc/datasets/userinfo.json
+
+# ---- 体积过大的生成物 / 媒体（可脚本重新获取） ----
+# 曲库封面：由 data/wmc/datasets/coverget.py 从 dxrating.net 重新下载
+data/wmc/materials/covers/
+# b 站下载缓存视频
+data/regular/bilibili/*.mp4
+data/regular/bilibili/*.flv
